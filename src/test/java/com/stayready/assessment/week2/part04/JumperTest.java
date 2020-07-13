@@ -33,7 +33,8 @@ public class JumperTest {
         Assert.assertEquals(expected, actual);
 
     }
-
+    
+    /* Told to skip
     @Test
     public void solution3(){
         // Should assert to true
@@ -63,4 +64,5 @@ public class JumperTest {
         Assert.assertEquals(expected, actual);
 
     }
+    */
 }

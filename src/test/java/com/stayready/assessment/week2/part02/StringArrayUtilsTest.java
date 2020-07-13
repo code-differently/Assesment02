@@ -90,25 +90,33 @@ public class StringArrayUtilsTest {
         Assert.assertArrayEquals(expected, actual);
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test
     public void testGetSubArrayOutOfBounds1() {
         // given
         String[] input = {"The", "Quick", "Brown", "Fox", "Jumps"};
+        String[] expected = {};
         int startIndex = 98;
         int endIndex = 99;
 
         // when
-        StringArrayUtils.getSubArray(input, startIndex, endIndex);
+        String[] actual=StringArrayUtils.getSubArray(input, startIndex, endIndex);
+
+        // Then
+        Assert.assertArrayEquals(expected, actual);
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test
     public void testGetSubArrayOutOfBounds2() {
         // given
         String[] input = {"The", "Quick", "Brown", "Fox", "Jumps"};
+        String[] expected = {};
         int startIndex = -1;
         int endIndex = -10;
 
         // when
-        StringArrayUtils.getSubArray(input, startIndex, endIndex);
+        String[] actual=StringArrayUtils.getSubArray(input, startIndex, endIndex);
+        
+        // Then
+        Assert.assertArrayEquals(expected, actual);
     }
 }
