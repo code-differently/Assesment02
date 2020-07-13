@@ -49,11 +49,12 @@ public class PredicateUtilities {
      * @return true if `string` starts with a capital letter
      */
     public static Boolean startsWithCapitalLetter(String string) {
-        boolean bool = false;
-        if(string.matches("[a-z]") || string.matches("[A-Z]")){
-            bool = true;
+        if(string.matches("^[A-Za-z]*$")){
+            if(string.charAt(0) == string.toUpperCase().charAt(0)){
+                return true;
         }
-        return bool;
-    
     }
+        return false;
+    
+    }  
 }
