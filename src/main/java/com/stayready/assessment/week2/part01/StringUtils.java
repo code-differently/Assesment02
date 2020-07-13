@@ -66,6 +66,6 @@ public class StringUtils {
      */
     public static Boolean isSpecialCharacterString(String string) {
         String onlySpecialChars = string.replaceAll("\\s", "");
-        return onlySpecialChars.matches("[!@#$%&*()_+=|<>?{}[]~-]+\\");
+        return onlySpecialChars.matches("[!@#$%&*()_+=|<>?{}\\[\\]~-]+");
     }
 }

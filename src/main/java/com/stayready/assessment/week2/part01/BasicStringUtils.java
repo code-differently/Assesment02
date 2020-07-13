@@ -1,7 +1,5 @@
 package com.stayready.assessment.week2.part01;
 
-import java.util.ArrayList;
-
 public class BasicStringUtils {
     /**
      * @param string1 - Base string to be added to
