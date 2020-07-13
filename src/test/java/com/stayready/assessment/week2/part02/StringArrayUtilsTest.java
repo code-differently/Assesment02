@@ -32,7 +32,7 @@ public class StringArrayUtilsTest {
         Assert.assertArrayEquals(expected, actual);
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void testGetEndingArrayOutOfBounds1() {
         // given
         String[] input = {"The", "Quick", "Brown", "Fox", "Jumps"};
