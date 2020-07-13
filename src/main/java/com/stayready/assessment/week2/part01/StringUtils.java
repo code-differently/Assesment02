@@ -7,9 +7,9 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by left-padding
      */
     public static String padLeft(String stringToBePadded, int amountOfPadding) {
-        return null;
+        String results = String.format("%s", stringToBePadded);
+        return results;
     }
-
     /**
      * @param stringToBePadded - string value to be flushed left
      * @param amountOfPadding - amount of padding to be flushed right
