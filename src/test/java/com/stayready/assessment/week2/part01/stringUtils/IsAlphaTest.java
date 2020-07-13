@@ -46,7 +46,7 @@ public class IsAlphaTest {
     @Test
     public void numericStringTest2() {
         // Given
-        String alphaString = "Over the lazy dog1";
+        String alphaString = "Over the lazy dog";
 
         // When
         boolean outcome = StringUtils.isAlphaString(alphaString);

@@ -1,23 +1,33 @@
 package com.stayready.assessment.week2.part03;
 
 public class PetOwner {
+
+    public String ownerName;
+    public Pet[] pet=  new Pet[5];
+
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
-    public PetOwner(String name, Pet... pets) {
+    public PetOwner(String name, Pet...pets)
+    {
+        ownerName = name;
+        pet = pets;
+        
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+        
     }
 
     /**
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
+        
 
     }
 
@@ -26,7 +36,8 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+        
+        return false;
     }
 
     /**
@@ -72,6 +83,7 @@ public class PetOwner {
      * @return array representation of animals owned by this PetOwner
      */
     public Pet[] getPets() {
+      
         return null;
     }
 }
