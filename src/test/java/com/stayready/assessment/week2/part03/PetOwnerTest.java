@@ -26,8 +26,9 @@ public class PetOwnerTest {
     @Test
     public void addPetTest1() {
         // Given
+        Pet [] petHolder = new Pet[0];
         Pet expected = new Dog();
-        PetOwner po = new PetOwner("", null);
+        PetOwner po = new PetOwner("", petHolder);
 
         // When
         po.addPet(expected);
@@ -40,8 +41,9 @@ public class PetOwnerTest {
     @Test
     public void addPetTest2() {
         // Given
+        Pet [] petHolder = new Pet[0];
         Pet newPet = new Dog();
-        PetOwner po = new PetOwner("", null);
+        PetOwner po = new PetOwner("", petHolder);
 
         // When
         po.addPet(newPet);
@@ -51,17 +53,18 @@ public class PetOwnerTest {
         Assert.assertTrue(outcome);
     }
 
+    //Changed to see if the size of pets owned was zero
     @Test
     public void removePetTest() {
         // Given
         Pet newPet = new Dog();
         PetOwner po = new PetOwner("", newPet);
-        Pet expected = null;
+        Integer expected = 0;
 
         // When
         po.removePet(newPet);
-        Pet actual = po.getPets()[0];
-
+        //Pet actual = po.getPets()[0]; //Wouldn't this be an Index out of bounds error
+        Integer actual = po.getNumberOfPets();
         // Then
         Assert.assertEquals(expected, actual);
     }

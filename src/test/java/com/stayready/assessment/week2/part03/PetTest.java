@@ -31,11 +31,13 @@ public class PetTest {
     }
 
 
+    /*Created method setOwnership in PetOwner to set 
+        any pet added in constructor as owned by PetOwner object*/
     @Test
     public void getOwnerTest() {
         // Given
         Pet p = new Dog();
-        PetOwner expected = new PetOwner(null, p);
+        PetOwner expected = new PetOwner(null, p); 
 
         // When
         PetOwner actual = p.getOwner();
