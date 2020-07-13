@@ -1,5 +1,7 @@
 package com.stayready.assessment.week2.part02;
 
+import java.util.Arrays;
+
 public class MultiplesDeleter {
     /**
      * @param ints array of Integer objects
@@ -7,7 +9,20 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        int count=0;
+        for (Integer anInt : ints) {
+            if (anInt % 2 == 1) {
+                count++;
+            }
+        }
+        Integer[] intCopy= Arrays.copyOf(ints, count);
+        for(int i=0,j=0;i<ints.length;i++) {
+            if (ints[i] % 2 == 1) {
+                intCopy[j]=ints[i];
+                j++;
+            }
+        }
+        return intCopy;
     }
 
     /**
@@ -16,8 +31,22 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        int count=0;
+        for (Integer anInt : ints) {
+            if (anInt % 2 == 0) {
+                count++;
+            }
+        }
+        Integer[] intCopy= Arrays.copyOf(ints, count);
+        for(int i=0,j=0;i<ints.length;i++) {
+            if (ints[i] % 2 == 0) {
+                intCopy[j]=ints[i];
+                j++;
+            }
+        }
+        return intCopy;
     }
+
 
     /**
      * @param ints array of Integer objects
@@ -25,7 +54,20 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        int count=0;
+        for (Integer anInt : ints) {
+            if (anInt % 3 != 0) {
+                count++;
+            }
+        }
+        Integer[] intCopy= Arrays.copyOf(ints, count);
+        for(int i=0,j=0;i<ints.length;i++) {
+            if (ints[i] % 3 != 0) {
+                intCopy[j]=ints[i];
+                j++;
+            }
+        }
+        return intCopy;
     }
 
     /**
@@ -35,6 +77,19 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+        int count=0;
+        for (Integer anInt : ints) {
+            if (anInt % multiple != 0) {
+                count++;
+            }
+        }
+        Integer[] intCopy= Arrays.copyOf(ints, count);
+        for(int i=0,j=0;i<ints.length;i++) {
+            if (ints[i] % multiple != 0) {
+                intCopy[j]=ints[i];
+                j++;
+            }
+        }
+        return intCopy;
     }
 }
