@@ -8,7 +8,15 @@ public class StringArrayUtils {
      * @return an array with all elements between `startingIndex` and `endingIndex`
      */
     public static String[] getSubArray(String[] arrayToBeSpliced, int startingIndex, int endingIndex) {
-        return null;
+        int size = endingIndex - startingIndex;
+        String[] a = new String[size];
+        int index = 0;
+
+        for (int i = startingIndex; i < endingIndex; i++) {
+            a[index] = arrayToBeSpliced[i];
+            index++;
+        }
+        return a;
     }
 
 
@@ -18,6 +26,14 @@ public class StringArrayUtils {
      * @return an array all elements between after `startingIndex`
      */
     public static String[] getEndingArray(String[] arrayToBeSpliced, int startingIndex) {
-        return null;
+        int size = arrayToBeSpliced.length - startingIndex;
+        String[] a = new String[size];
+        int index = 0;
+
+        for (int i = startingIndex; i < arrayToBeSpliced.length; i++) {
+            a[index] = arrayToBeSpliced[i];
+            index++;
+        }
+        return a;
     }
 }
