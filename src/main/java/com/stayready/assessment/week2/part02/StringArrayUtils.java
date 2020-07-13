@@ -8,7 +8,13 @@ public class StringArrayUtils {
      * @return an array with all elements between `startingIndex` and `endingIndex`
      */
     public static String[] getSubArray(String[] arrayToBeSpliced, int startingIndex, int endingIndex) {
-        return null;
+        String[] subArray = new String[arrayToBeSpliced.length];
+        int index = 0;
+        for(String word: arrayToBeSpliced) {
+            subArray[index] = word.substring(startingIndex, endingIndex);
+            index++;
+        }
+        return subArray;
     }
 
 
