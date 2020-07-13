@@ -1,5 +1,7 @@
 package com.stayready.assessment.week2.part01;
 
+import java.lang.*;
+
 public class BasicStringUtils {
     /**
      * @param string1 - Base string to be added to
@@ -7,7 +9,8 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+
+        return string1.concat(string2);
     }
 
     /**
@@ -15,7 +18,13 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+
+        String reverse = "";
+        for(int i = string1.length()-1; i >= 0; i--) {
+            reverse += string1.charAt(i);
+        }
+
+        return reverse;
     }
 
     /**
@@ -24,7 +33,8 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+
+        return concatentate(reverse(string1), reverse(string2));
     }
 
     /**
@@ -33,7 +43,16 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+
+        char [] temp = charactersToRemove.toCharArray();
+        String str = "";
+        for(int i = 0; i < temp.length; i++) {
+
+            string = remove(string, temp[i]);
+
+        }
+
+        return string;
     }
 
     /**
@@ -42,6 +61,25 @@ public class BasicStringUtils {
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+
+        string = removeCharacters(string, charactersToRemove);
+
+        return reverse(string);
+    }
+
+
+    public static String remove(String toChange, char toRemove) {
+
+        String output = "";
+        for(int i = 0; i < toChange.length(); i++) {
+
+            if(toRemove != toChange.charAt(i)) {
+
+                output += toChange.charAt(i);
+            }
+        }
+
+        return output;
     }
 }
+
