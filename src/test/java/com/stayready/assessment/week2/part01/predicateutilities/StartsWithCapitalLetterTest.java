@@ -36,6 +36,6 @@ public class StartsWithCapitalLetterTest {
         Boolean actualOutcome = PredicateUtilities.startsWithCapitalLetter(value);
 
         // then
-        Assert.assertEquals(actualOutcome, expectedOutcome);
+        Assert.assertEquals(expectedOutcome, actualOutcome);
     }
 }

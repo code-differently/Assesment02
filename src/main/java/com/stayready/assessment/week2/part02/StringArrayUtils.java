@@ -1,5 +1,7 @@
 package com.stayready.assessment.week2.part02;
 
+import java.util.Arrays;
+
 public class StringArrayUtils {
     /**
      * @param arrayToBeSpliced - array to be evaluated
@@ -8,7 +10,36 @@ public class StringArrayUtils {
      * @return an array with all elements between `startingIndex` and `endingIndex`
      */
     public static String[] getSubArray(String[] arrayToBeSpliced, int startingIndex, int endingIndex) {
-        return null;
+//        if (startingIndex <=  0)
+//        {
+//            startingIndex = 0;
+//        }
+//        if (endingIndex >= arrayToBeSpliced.length -1)
+//        {
+//            endingIndex = arrayToBeSpliced.length - 1;
+//        }
+//
+//        String[] new_arr = new String[startingIndex+endingIndex];
+//        for (int index = 0; index < arrayToBeSpliced.length; index++)
+//        {
+//            if (index >= startingIndex && index <= endingIndex)
+//            {
+//                new_arr[index] = arrayToBeSpliced[index];
+//            }
+//        }
+
+//        return new_arr;
+
+//        if (startingIndex <=  0 || startingIndex >= arrayToBeSpliced.length -1)
+//        {
+//            startingIndex = 0;
+//        }
+//        if (endingIndex >= arrayToBeSpliced.length -1 || startingIndex > arrayToBeSpliced.length -1)
+//        {
+//            endingIndex = arrayToBeSpliced.length - 1;
+//        }
+        return Arrays.copyOfRange(arrayToBeSpliced, startingIndex, endingIndex);
+
     }
 
 
@@ -18,6 +49,11 @@ public class StringArrayUtils {
      * @return an array all elements between after `startingIndex`
      */
     public static String[] getEndingArray(String[] arrayToBeSpliced, int startingIndex) {
-        return null;
+//        if (startingIndex <=  0 || startingIndex >= arrayToBeSpliced.length - 1)
+//        {
+//            startingIndex = 0;
+//        }
+
+        return Arrays.copyOfRange(arrayToBeSpliced, startingIndex, arrayToBeSpliced.length-1);
     }
 }
