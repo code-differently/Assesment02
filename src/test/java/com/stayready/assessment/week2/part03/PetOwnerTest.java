@@ -27,7 +27,7 @@ public class PetOwnerTest {
     public void addPetTest1() {
         // Given
         Pet expected = new Dog();
-        PetOwner po = new PetOwner("", null);
+        PetOwner po = new PetOwner("");
 
         // When
         po.addPet(expected);
@@ -41,7 +41,7 @@ public class PetOwnerTest {
     public void addPetTest2() {
         // Given
         Pet newPet = new Dog();
-        PetOwner po = new PetOwner("", null);
+        PetOwner po = new PetOwner("");
 
         // When
         po.addPet(newPet);
@@ -92,7 +92,7 @@ public class PetOwnerTest {
         PetOwner po = new PetOwner("", oneYearOldPuppy, twoYearOldKitten);
 
         // When
-        int actual = po.getYoungetPetAge();
+        int actual = po.getYoungestPetAge();
 
         // Then
         Assert.assertEquals(expected, actual);
