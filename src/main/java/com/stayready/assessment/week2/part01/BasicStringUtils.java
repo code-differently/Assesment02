@@ -7,7 +7,19 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+
+        return string1 + string2;
+
+        //OR
+
+        string1 = "";
+        string2 = "";
+        String string3 = string1.concat(string2);
+        return string3;
+        //OR
+
+        String s =(new StringBuilder()).append(string1).append(string2).toString();
+        return s;
     }
 
     /**
@@ -15,7 +27,11 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        String string = "";
+        for(int i = 0; i < string1.length(); i++){
+            String t = string1.charAt(string1.length()-1 - i);
+        }
+        return string;
     }
 
     /**
@@ -24,16 +40,36 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
-    }
+        String reverse = BasicStringUtils.reverse(string1);
+        String thenConcat = BasicStringUtils.concatenate(reverse);
+        return thenConcat;
+
+        //OR
+
+        }
+
+    
 
     /**
      * @param string - the string to be manipulated
      * @param charactersToRemove - Characters that should be removed from `string`
      * @return `string` with `charactersToRemove` removed
      */
+    //CONFUSED
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+       for (int i = 0; i < string.length(); i++)
+       {
+           if (string[i].equals(charactersToRemove))
+           {
+               string[i] = null;
+           }
+       }
+       
+       //OR
+       
+        String str = charactersToRemove;
+        String str = string.substring(string.length[]);
+        return string;
     }
 
     /**

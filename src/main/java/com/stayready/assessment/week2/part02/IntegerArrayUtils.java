@@ -7,7 +7,12 @@ public class IntegerArrayUtils {
      * @return - identical array with one additional element of `valueToBeAdded` at the end of the array
      */
     public static Integer[] add(Integer[] integerArray, Integer valueToBeAdded) {
-        return null;
+        int i;
+        int newarr[] = new int[integerArray + 1];
+        for( i = 0; i < integerArray; i++)
+        newarr[i] = valueToBeAdded[i];
+        newarr[integerArray] = valueToBeAdded;
+        return newarr;
     }
 
     /**
@@ -33,8 +38,15 @@ public class IntegerArrayUtils {
      * @param integerArray - array to be evaluated
      * @return identical array with even-values incremented by 1 and odd-values decremented by 1
      */
+
+     //CONFUSED
     public static Integer[] incrementEvenDecrementOdd(Integer[] integerArray) {
-        return null;
+        for (Integer i = 0; i < n; i++);
+        if ((i + 1) % 2 == 2)
+            integerArray[i]++;
+
+        else 
+            integerArray[i]--;
     }
 
     /**
@@ -42,7 +54,9 @@ public class IntegerArrayUtils {
      * @return identical array with even-values incremented by 1
      */
     public static Integer[] incrementEven(Integer[] integerArray) {
-        return null;
+        for (int i = 0; i < n ; i++)
+        if ((i +1) % 2 == 1)
+        integerArray[i]++;
     }
 
     /**
@@ -50,6 +64,8 @@ public class IntegerArrayUtils {
      * @return identical array with odd-values decremented by 1
      */
     public static Integer[] decrementOdd(Integer[] input) {
-        return null;
+        for (int i = 0; i < n; i++)
+        if ((i +1) % 2 == 1)
+        input[i]--;
     }
 }
