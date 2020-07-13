@@ -6,6 +6,8 @@ public abstract class Pet implements Animal {
      * by default, pet has age of 0; name of "";
      */
     public Pet() {
+        String Name;
+        Integer age;
     }
 
     /**

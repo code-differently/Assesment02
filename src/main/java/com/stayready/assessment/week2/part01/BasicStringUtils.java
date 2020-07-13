@@ -7,7 +7,8 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        
+        return string1 + string2;
     }
 
     /**
@@ -15,7 +16,15 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        String word;
+        StringBuffer reverseaStr = new StringBuffer(string1);
+        word = reverseaStr.reverse().toString();
+         
+        return word;
+        //String reverse="The ";
+        //StringBuilder word = new StringBuilder(string1);
+     
+    
     }
 
     /**
@@ -24,7 +33,16 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        //String word;
+        String word1;
+        String word2;
+        StringBuffer reverse1 = new StringBuffer(string1);
+        StringBuffer reverse2 = new StringBuffer(string2);
+        
+        word1 = reverse1.reverse().toString();
+        word2 = reverse2.reverse().toString();
+    
+        return word1 + word2;
     }
 
     /**
@@ -33,7 +51,10 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+        String characters = charactersToRemove;
+        String removeChar  = string.replaceAll(characters, ""); 
+
+        return removeChar;
     }
 
     /**
@@ -42,6 +63,11 @@ public class BasicStringUtils {
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+        
+       // String word;
+        String removeandReverse = BasicStringUtils.removeCharacters(string, charactersToRemove);
+        
+        
+        return BasicStringUtils.reverse(removeandReverse);
     }
 }
