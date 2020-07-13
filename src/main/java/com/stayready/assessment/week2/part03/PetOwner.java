@@ -14,6 +14,11 @@ public class PetOwner {
     {
         this.name = name;
         this.pets = pets;
+        if (pets != null) {
+            for (Pet aPet : pets) {
+                aPet.setOwner(this);
+            }
+        }
     }
 
     /**

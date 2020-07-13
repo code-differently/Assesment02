@@ -7,13 +7,22 @@ public class Jumper {
      */
     public int jumps(int flagHeight, int jumpHeight)
     {
-        if(jumpHeight == flagHeight)
+        if(flagHeight % jumpHeight == 0)
         {
-            return jumpHeight;
+            return flagHeight / jumpHeight;
+        }
+
+        if(flagHeight < jumpHeight)
+        {
+            return flagHeight / 1;
+        }
+        if(flagHeight == jumpHeight)
+        {
+            return 1;
         }
         else
         {
-            return jumps(flagHeight, jumpHeight + 1);
+            return (flagHeight / jumpHeight) + (flagHeight % jumpHeight);
         }
     }
 }
