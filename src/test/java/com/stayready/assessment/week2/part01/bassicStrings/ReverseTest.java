@@ -1,4 +1,4 @@
-package com.stayready.assessment.week2.part01.bassicStrings;
+    package com.stayready.assessment.week2.part01.bassicStrings;
 
 import com.stayready.assessment.week2.part01.BasicStringUtils;
 import org.junit.Assert;
