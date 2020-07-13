@@ -1,25 +1,31 @@
 package com.stayready.assessment.week2.part03;
 
-public class Dog extends Pet {
+public class Dog extends Pet
+{
+
     /**
      * @param name name of this Dog
      * @param age age of this dog
      */
-    public Dog(String name, Integer age) {
-
+    public Dog(String name, Integer age)
+    {
+        super(name, age);
     }
 
     /**
      * @param age age of this dog
      */
-    public Dog(Integer age) {
+    public Dog(Integer age)
+    {
+        super(age);
     }
 
     /**
      * @param name name of this dog
      */
-    public Dog(String name) {
-
+    public Dog(String name)
+    {
+        super(name);
     }
 
     /**
@@ -28,13 +34,15 @@ public class Dog extends Pet {
      * name is DogName
      * age is 0
      */
-    public Dog() {
+    public Dog()
+    {
+        super("DogName", 0);
     }
 
     /**
      * @return bark as a string
      */
     public String speak() {
-        return null;
+        return "bark";
     }
 }
