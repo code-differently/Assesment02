@@ -1,5 +1,7 @@
 package com.stayready.assessment.week2.part01;
 
+import java.util.ArrayList;
+
 public class BasicStringUtils {
     /**
      * @param string1 - Base string to be added to
@@ -7,7 +9,7 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        return string1 + string2;
     }
 
     /**
@@ -15,7 +17,9 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        StringBuilder sb = new StringBuilder(string1);
+        String reversed = sb.reverse() + "";
+        return reversed;
     }
 
     /**
@@ -24,7 +28,8 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        String reversed = reverse(string1) + reverse(string2);
+        return reversed;
     }
 
     /**
@@ -33,7 +38,49 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+//        ArrayList<Character> chars = new ArrayList<>();
+//        ArrayList<Character> bad_chars = new ArrayList<>();
+//        ArrayList<Character> new_word = new ArrayList<>();
+//        String wanted_word = "";
+//
+//        for (int index = 0; index < string.length(); index++)
+//        {
+//            chars.add(string.charAt(index));
+//        }
+//
+//        for (int index = 0; index < charactersToRemove.length(); index++)
+//        {
+//            bad_chars.add(string.charAt(index));
+//        }
+//
+//        for (int outer = 0; outer < bad_chars.size(); outer++)
+//        {
+//            for (int inner = 0; inner < chars.size(); inner++)
+//            {
+//                if (bad_chars.get(outer) != chars.get(inner))
+//                {
+//                    new_word.add(chars.get(inner));
+//                }
+//            }
+//        }
+//
+//        for (int index = 0; index < new_word.size(); index++)
+//        {
+//            wanted_word = wanted_word + new_word.get(index);
+//        }
+//
+//        return wanted_word;
+
+        //ArrayList<Character> bad_chars = new ArrayList<>();
+
+
+        for (int index = 0; index < charactersToRemove.length(); index++)
+        {
+            String unwanted = charactersToRemove.charAt(index) + "";
+            string = string.replaceAll(unwanted, "");
+        }
+
+        return string;
     }
 
     /**
@@ -42,6 +89,10 @@ public class BasicStringUtils {
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+
+        String unreversed = removeCharacters(string, charactersToRemove);
+
+        return reverse(unreversed);
     }
+
 }
