@@ -5,7 +5,12 @@ public class Jumper {
     /*
      * Complete the function below.
      */
+    //Flagheight jumpheight
     public int jumps(int k, int j) {
-        return -1;
+        if(j >= k){
+            return 1;
+        }
+
+        return 1 + jumps(k, j + j);
     }
 }
