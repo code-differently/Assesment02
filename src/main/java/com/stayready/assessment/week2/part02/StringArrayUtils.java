@@ -1,5 +1,7 @@
 package com.stayready.assessment.week2.part02;
 
+import java.util.Arrays;
+
 public class StringArrayUtils {
     /**
      * @param arrayToBeSpliced - array to be evaluated
@@ -8,7 +10,10 @@ public class StringArrayUtils {
      * @return an array with all elements between `startingIndex` and `endingIndex`
      */
     public static String[] getSubArray(String[] arrayToBeSpliced, int startingIndex, int endingIndex) {
-        return null;
+
+        arrayToBeSpliced = Arrays.copyOfRange(arrayToBeSpliced, startingIndex, endingIndex);
+        return arrayToBeSpliced;
+
     }
 
 
@@ -18,6 +23,9 @@ public class StringArrayUtils {
      * @return an array all elements between after `startingIndex`
      */
     public static String[] getEndingArray(String[] arrayToBeSpliced, int startingIndex) {
-        return null;
+
+        arrayToBeSpliced = Arrays.copyOfRange(arrayToBeSpliced, startingIndex, arrayToBeSpliced.length);
+        return arrayToBeSpliced;
+
     }
 }

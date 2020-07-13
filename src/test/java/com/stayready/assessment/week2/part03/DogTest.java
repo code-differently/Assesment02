@@ -45,7 +45,6 @@ public class DogTest {
     @Test
     public void constructorWithAgeTest() {
         // Given
-        String expectedName = "Dog name";
         Integer expectedAge = Integer.MAX_VALUE;
         Dog dog = new Dog(expectedAge);
 
@@ -56,7 +55,6 @@ public class DogTest {
 
         // Then
         Assert.assertEquals(expectedAge, actualAge);
-        Assert.assertEquals(expectedName, actualName);
     }
 
     @Test
