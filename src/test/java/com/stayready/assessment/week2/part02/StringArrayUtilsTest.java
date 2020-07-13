@@ -93,7 +93,8 @@ public class StringArrayUtilsTest {
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetSubArrayOutOfBounds1() {
         // given
-        String[] input = {"The", "Quick", "Brown", "Fox", "Jumps"};
+        String[] input
+                = {"The", "Quick", "Brown", "Fox", "Jumps"};
         int startIndex = 98;
         int endIndex = 99;
 

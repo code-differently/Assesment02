@@ -36,9 +36,7 @@ public class StringUtils {
      * @return - true if string only contains alphabetic a-z characters
      */
     public static Boolean isAlphaString(String string) {
-        return ((string != null)
-                && (!string.equals(""))
-                && (!string.matches("^[a-zA-Z]*$")));
+        return ((string != null) && (!string.equals("")) && (!string.matches("^[a-zA-Z]*$")));
     }
 
     /**
