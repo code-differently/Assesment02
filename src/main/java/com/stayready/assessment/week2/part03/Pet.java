@@ -46,6 +46,14 @@ public abstract class Pet implements Animal {
         return this.name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     /**
      * @return age of this pet
      */
@@ -58,12 +66,14 @@ public abstract class Pet implements Animal {
      * ensure this instance of `Pet` is added to the owner's composite `pets` list
      */
     public void setOwner(PetOwner newPetOwner) {
+        newPetOwner.addPet(this);
     }
 
     /**
      * @return PetOwner object whose composite `pets` collection contains this Pet instance
      */
     public PetOwner getOwner() {
+        //return this.;
         return null;
     }
 }

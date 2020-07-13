@@ -99,7 +99,7 @@ public class PetOwner {
 
         float avg = ages / this.getPets().length;
 
-        return avg;
+        return (float)Math.ceil(avg);
     }
 
     /**
