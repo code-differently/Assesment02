@@ -45,13 +45,18 @@ public class BasicStringUtils {
     public static String removeCharacters(String string, String charactersToRemove) {
         String str = string;
         String newStr = "";
+        boolean isFound = false;
         for(int i = 0; i < str.length(); i++){
            for(int j = 0; j < charactersToRemove.length(); j++){
-               if((str.charAt(i) == charactersToRemove.charAt(j))){
-                   
-                    newStr += str.charAt(i);
-                    
+               if((str.charAt(i) == charactersToRemove.charAt(j)) && isFound == false){
+                    isFound = true;
                }
+           }
+           if(!isFound){
+            newStr += str.charAt(i);
+           }
+           else{
+               isFound = false;
            }
         }
         return newStr;
@@ -63,6 +68,7 @@ public class BasicStringUtils {
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+        String newStr = removeCharacters(string, charactersToRemove);
+        return reverse(newStr);
     }
 }
