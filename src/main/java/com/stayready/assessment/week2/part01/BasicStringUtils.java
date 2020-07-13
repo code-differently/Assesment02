@@ -7,7 +7,8 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        String result = string1.concat(string2);
+        return result;
     }
 
     /**
@@ -15,7 +16,11 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        String revString = "";
+        for (int i = string1.length() - 1; i >= 0; i--) {
+            revString = revString + string1.charAt(i);
+        }
+        return revString;
     }
 
     /**
@@ -24,11 +29,20 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        String revString1 = "";
+        String revString2 = "";
+        for (int i = string1.length() - 1; i >= 0; i--) {
+            revString1 = revString1 + string1.charAt(i);
+        }
+        for (int i = string2.length() - 1; i >= 0; i--) {
+            revString2 = revString2 + string2.charAt(i);
+        }
+        String result = revString1.concat(revString2);
+        return result;
     }
 
     /**
-     * @param string - the string to be manipulated
+     * @param string             - the string to be manipulated
      * @param charactersToRemove - Characters that should be removed from `string`
      * @return `string` with `charactersToRemove` removed
      */
@@ -37,7 +51,7 @@ public class BasicStringUtils {
     }
 
     /**
-     * @param string - the string to be manipulated
+     * @param string             - the string to be manipulated
      * @param charactersToRemove - characters to be removed from the string
      * @return reverse of `string` with `charactersToRemove` removed
      */
