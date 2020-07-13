@@ -26,8 +26,9 @@ public class PetOwnerTest {
     @Test
     public void addPetTest1() {
         // Given
+        Pet[] emptyPet = {};
         Pet expected = new Dog();
-        PetOwner po = new PetOwner("", null);
+        PetOwner po = new PetOwner("", emptyPet);
 
         // When
         po.addPet(expected);
@@ -40,8 +41,9 @@ public class PetOwnerTest {
     @Test
     public void addPetTest2() {
         // Given
+        Pet[] emptyPet = {};
         Pet newPet = new Dog();
-        PetOwner po = new PetOwner("", null);
+        PetOwner po = new PetOwner("", emptyPet);
 
         // When
         po.addPet(newPet);
