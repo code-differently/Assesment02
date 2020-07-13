@@ -7,7 +7,7 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by left-padding
      */
     public static String padLeft(String stringToBePadded, int amountOfPadding) {
-        return null;
+        return String.format("%" + amountOfPadding + "s", stringToBePadded);
     }
 
     /**
@@ -16,7 +16,7 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by right-padding
      */
     public static String padRight(String stringToBePadded, int amountOfPadding) {
-        return null;
+        return String.format("%" + (-amountOfPadding) + "s", stringToBePadded);
     }
 
     /**
@@ -25,7 +25,11 @@ public class StringUtils {
      * @return the string repeated and concatenated `n` times
      */
     public static String repeatString(String stringToBeRepeated, int numberOfTimeToRepeat) {
-        return null;
+        StringBuilder ans = new StringBuilder();
+        for(int numTimes = 0; numTimes < numberOfTimeToRepeat; numTimes++) {
+            ans.append(stringToBeRepeated);
+        }
+        return ans.toString();
     }
 
     /**
@@ -33,7 +37,16 @@ public class StringUtils {
      * @return - true if string only contains alphabetic a-z characters
      */
     public static Boolean isAlphaString(String string) {
-        return null;
+        boolean isAlpha = true;
+        for(char letter: string.toCharArray()) {
+            if(!Character.isLetter(letter))  {
+                isAlpha = false;
+            }
+            if(letter == ' ') {
+                isAlpha = true;
+            }
+        }
+        return isAlpha;
     }
 
     /**
@@ -41,7 +54,16 @@ public class StringUtils {
      * @return - true if string only contains numeric characters
      */
     public static Boolean isNumericString(String string) {
-        return null;
+        boolean isNumeric = true;
+        for(char digit: string.toCharArray()) {
+            if(!Character.isDigit(digit))  {
+                isNumeric = false;
+            }
+            if(digit == ' ') {
+                isNumeric = true;
+            }
+        }
+        return isNumeric;
     }
 
     /**
@@ -49,6 +71,12 @@ public class StringUtils {
      * @return - true if string only contains special characters
      */
     public static Boolean isSpecialCharacterString(String string) {
-        return null;
+        boolean ans = true;
+        for(char letter: string.toCharArray()) {
+            if(isNumericString(String.valueOf(letter)) || isAlphaString(String.valueOf(letter))) {
+                ans = false;
+            }
+        }
+        return ans;
     }
 }
