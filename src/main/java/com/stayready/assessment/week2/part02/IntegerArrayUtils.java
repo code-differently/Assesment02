@@ -1,6 +1,7 @@
 package com.stayready.assessment.week2.part02;
 
-public class IntegerArrayUtils {
+public class
+IntegerArrayUtils {
     /**
      * @param integerArray - array to have value added to it
      * @param valueToBeAdded - value to be added to the end of the array

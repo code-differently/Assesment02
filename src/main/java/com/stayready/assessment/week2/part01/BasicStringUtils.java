@@ -7,7 +7,8 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        String string = string1 + string2;
+        return string;
     }
 
     /**
@@ -15,7 +16,17 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        if (string1 == null) {
+            return string1;
+        }
+
+        String output = "";
+
+        for (int i = string1.length() - 1; i >= 0; i--) {
+            output = output + string1.charAt(i);
+        }
+
+        return output;
     }
 
     /**
@@ -24,7 +35,27 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        if (string1 == null) {
+            return string1;
+        }
+
+        String output = "";
+
+        for (int i = string1.length() - 1; i >= 0; i--) {
+            output = output + string1.charAt(i);
+        }
+
+        if (string2 == null) {
+            return string2;
+        }
+
+        for (int i = string2.length() - 1; i >= 0; i--) {
+            output = output + string2.charAt(i);
+        }
+        String outputt = "";
+
+        return output;
+
     }
 
     /**
@@ -33,15 +64,21 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+        for (int i = 0; i < string.length() - 1; i++) {
+            int n = 0;
+            while (n == i) {
+                string = string.replaceFirst(String.valueOf(string.charAt(i)), "");
+            }
+        }
+        return string;
     }
+
 
     /**
      * @param string - the string to be manipulated
      * @param charactersToRemove - characters to be removed from the string
      * @return reverse of `string` with `charactersToRemove` removed
      */
-    public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
-    }
-}
+   public static String removeCharactersThenReverse(String string, String charactersToRemove){
+                return null;
+            }}
