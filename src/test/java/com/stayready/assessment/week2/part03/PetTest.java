@@ -40,6 +40,7 @@ public class PetTest {
         // When
         PetOwner actual = p.getOwner();
 
+
         // Then
         Assert.assertEquals(expected, actual);
     }
