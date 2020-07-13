@@ -22,7 +22,7 @@ public class RepeatStringTest {
         String actual = StringUtils.repeatString(stringToRepeat, numberOfTimesToRepeat);
 
         // then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected.trim(), actual);
     }
     @Test
     public void testRepeatQuickBrown6Times() {
@@ -42,6 +42,6 @@ public class RepeatStringTest {
         String actual = StringUtils.repeatString(stringToRepeat, numberOfTimesToRepeat);
 
         // then
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected.trim(), actual);
     }
 }
