@@ -25,7 +25,14 @@ public class StringUtils {
      * @return the string repeated and concatenated `n` times
      */
     public static String repeatString(String stringToBeRepeated, int numberOfTimeToRepeat) {
-        return null;
+        if (numberOfTimeToRepeat <= 0) {
+            return stringToBeRepeated;
+        }
+        StringBuilder x = new StringBuilder(stringToBeRepeated.length() * numberOfTimeToRepeat);
+        for (int i = 1; i <= numberOfTimeToRepeat; i++) {
+            x.append(stringToBeRepeated);
+        }
+        return x.toString();
     }
 
     /**
@@ -33,15 +40,20 @@ public class StringUtils {
      * @return - true if string only contains alphabetic a-z characters
      */
     public static Boolean isAlphaString(String string) {
-        return null;
+        if (string.matches("[abcdefghijklmnopqrstuvwxyz]+")){
+            return true;
+        }
+        return false;
     }
-
     /**
      * @param string - string to be evaluated
      * @return - true if string only contains numeric characters
      */
     public static Boolean isNumericString(String string) {
-        return null;
+        if (string.matches("[0-9]+")){
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -49,6 +61,9 @@ public class StringUtils {
      * @return - true if string only contains special characters
      */
     public static Boolean isSpecialCharacterString(String string) {
-        return null;
+        if (string.matches("[!&*(]+")){
+            return true;
+        }
+        return false;
     }
 }

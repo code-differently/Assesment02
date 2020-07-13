@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PetOwnerTest {
+
     @Test
     public void constructorTest() {
         // Given
