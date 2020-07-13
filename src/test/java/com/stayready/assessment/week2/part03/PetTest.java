@@ -38,6 +38,7 @@ public class PetTest {
         PetOwner expected = new PetOwner(null, p);
 
         // When
+        p.setOwner(expected);
         PetOwner actual = p.getOwner();
 
         // Then
