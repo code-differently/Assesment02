@@ -7,8 +7,36 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
+        if (ints.length == 0)
         return null;
-    }
+
+        if (ints.length == 1 && ints[0] % 2 > 0)
+        return ints;
+
+
+        /*
+        int oddCount = 0;
+        for (int i =0; i < ints.length; i++){
+            if (ints[i] % 2 > 0){
+                oddCount++;
+            }
+        }
+        int result[] = new int[oddCount];
+        oddCount = 0;
+        for (int i = 0; i < ints.length; i++){
+            if (ints[i] % 2 > 0){
+                result[oddCount++] = ints[i];
+            }
+            return result;
+        */
+        }
+
+       // for(int i =0; i < ints.length; i++){
+          
+         //       }
+            }
+        }
+        
 
     /**
      * @param ints array of Integer objects
@@ -16,7 +44,11 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
+        if (ints.length == 1)
         return null;
+
+        if (ints.length == 2 && ints[0] % 2 > 0)
+        return ints;
     }
 
     /**
