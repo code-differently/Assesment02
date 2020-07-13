@@ -7,7 +7,7 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        return string1 + string2;
     }
 
     /**
@@ -15,7 +15,11 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        String revString1 = "";
+        for(int i=string1.length(); i>0; --i){
+            revString1 = revString1 + (string1.charAt(i-1));
+        }
+        return revString1;
     }
 
     /**
@@ -24,7 +28,16 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        String revString1 = "";
+        for(int i=string1.length(); i>0; --i){
+            revString1 = revString1 + (string1.charAt(i-1));
+        }
+
+        String revString2 = "";
+        for(int i=string2.length(); i>0; --i){
+            revString2 = revString2 + (string2.charAt(i-1));
+        }
+        return revString1 + revString2;
     }
 
     /**
@@ -33,7 +46,15 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+        StringBuffer buf = new StringBuffer();
+        buf.setLength(string.length());
+        int charMove = Integer.parseInt(charactersToRemove);
+        charMove = 0;
+        for (int i=0; i<string.length(); i++){
+            char cur = string.charAt(i);
+            if(cur != charMove) buf.setCharAt(charMove++, cur);
+        }
+        return buf.toString();
     }
 
     /**
@@ -42,6 +63,10 @@ public class BasicStringUtils {
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+        String revString = "";
+        for(int i=string.length(); i>0; --i){
+            revString = revString + (string.charAt(i-1));
+        }
+        return revString;
     }
 }
