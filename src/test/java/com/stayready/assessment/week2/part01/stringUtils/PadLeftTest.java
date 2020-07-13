@@ -11,6 +11,7 @@ public class PadLeftTest {
         String hello = "hello";
         int numberOfUnitsToPad = 10;
         String expected = "     hello";
+        //String expected2 = "     hello";
 
         // When
         String actual = StringUtils.padLeft(hello, numberOfUnitsToPad);
@@ -25,12 +26,14 @@ public class PadLeftTest {
         String hello = "";
         int numberOfUnitsToPad = 15;
         String expected = "               ";
+        String expected2 = "               ";
 
         // When
         String actual = StringUtils.padLeft(hello, numberOfUnitsToPad);
 
         // Then
         Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, expected2);
     }
 
 

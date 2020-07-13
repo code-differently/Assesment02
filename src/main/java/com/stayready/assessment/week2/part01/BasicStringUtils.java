@@ -7,7 +7,7 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        return string1 + string2;
     }
 
     /**
@@ -15,7 +15,18 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+         //reverse the string and then reverse the elements in each index
+         //create the string builder
+         StringBuilder rev = new StringBuilder();
+         //add the input string into the string builder:
+         rev.append(string1); 
+         //now we can repoint reverse to the reverse of that string
+         rev = rev.reverse(); 
+         //now we convert string builder into a string
+         String answer = rev.toString();
+ 
+         return answer;
+        
     }
 
     /**
@@ -24,7 +35,7 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        return reverse(string1) + reverse(string2);
     }
 
     /**
@@ -33,7 +44,11 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+        char[] chars = charactersToRemove.toCharArray();
+        for(int i = 0; i < chars.length; i++){
+            string = string.replaceAll(String.valueOf(chars[i]), "");
+        }
+        return string; 
     }
 
     /**
@@ -42,6 +57,6 @@ public class BasicStringUtils {
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+        return reverse(removeCharacters(string, charactersToRemove));
     }
 }
