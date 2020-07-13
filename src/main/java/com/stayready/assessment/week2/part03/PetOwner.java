@@ -1,17 +1,21 @@
 package com.stayready.assessment.week2.part03;
 
 public class PetOwner {
+
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
+
+
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+
     }
 
     /**
@@ -29,49 +33,48 @@ public class PetOwner {
         return null;
     }
 
-    /**
-     * @return the age of the Pet object whose age field is the lowest amongst all Pets in this class
-     */
-    public Integer getYoungetPetAge() {
-        return null;
-    }
+        /**
+         * @return the age of the Pet object whose age field is the lowest amongst all Pets in this class
+         */
+        public Integer getYoungestPetAge () {
+           return null;
+        }
 
 
+        /**
+         * @return the age of the Pet object whose age field is the highest amongst all Pets in this class
+         */
+        public Integer getOldestPetAge () {
+            return null;
+        }
 
 
-    /**
-     * @return the age of the Pet object whose age field is the highest amongst all Pets in this class
-     */
-    public Integer getOldestPetAge() {
-        return null;
-    }
+        /**
+         * @return the sum of ages of Pet objects stored in this class divided by the number of Pet object
+         */
+        public Float getAveragePetAge () {
+            return null;
+        }
 
+        /**
+         * @return the number of Pet objects stored in this class
+         */
+        public Integer getNumberOfPets () {
+            return null;
+        }
 
-    /**
-     * @return the sum of ages of Pet objects stored in this class divided by the number of Pet object
-     */
-    public Float getAveragePetAge() {
-        return null;
-    }
+        /**
+         * @return the name property of the Pet
+         */
+        public String getName () {
+                return null;
+        }
 
-    /**
-     * @return the number of Pet objects stored in this class
-     */
-    public Integer getNumberOfPets() {
-        return null;
-    }
+        /**
+         * @return array representation of animals owned by this PetOwner
+         */
+        public Pet[] getPets() {
+                return null;
+        }
 
-    /**
-     * @return the name property of the Pet
-     */
-    public String getName() {
-        return null;
-    }
-
-    /**
-     * @return array representation of animals owned by this PetOwner
-     */
-    public Pet[] getPets() {
-        return null;
-    }
 }

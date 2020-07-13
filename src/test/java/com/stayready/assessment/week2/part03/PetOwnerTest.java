@@ -83,7 +83,7 @@ public class PetOwnerTest {
     }
 
 
-    @Test
+   /* @Test
     public void getYoungestPetAgeTest() {
         // Given
         int expected = 1;
@@ -98,7 +98,7 @@ public class PetOwnerTest {
         Assert.assertEquals(expected, actual);
 
     }
-
+*/
     @Test
     public void getOldestPetAgeTest() {
         // Given
