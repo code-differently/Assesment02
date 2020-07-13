@@ -1,7 +1,29 @@
 package com.stayready.assessment.week2.part05;
 
 public class Palindrome {
-    public Integer countPalindromes(String input){
-        return null;
+    public Integer countPalindromes(String input)
+    {
+       int count = input.length();
+       for (int i = 0; i < input.length();i++)
+       {
+           for (int j = i+2; j <= input.length();j++)
+           {
+               count+= isPalindrome(input.substring(i, j));
+           }
+       }
+       return count;
+    }
+
+    public int isPalindrome(String a)
+    {
+        for (int i = 0; i <a.length()/2;i++)
+        {
+            if (a.charAt(i) != a.charAt(a.length() - i - 1))
+            {
+                return 0;
+            }
+          
+        }  
+        return 1;
     }
 }

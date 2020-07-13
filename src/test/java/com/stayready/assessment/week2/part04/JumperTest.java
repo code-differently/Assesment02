@@ -6,7 +6,8 @@ import org.junit.Test;
 public class JumperTest {
 
     @Test
-    public void solution0(){
+    public void solution0()
+    {
         Jumper jumper = new Jumper();
         Integer expected = jumper.jumps(3,1);
         Integer actual = 3;

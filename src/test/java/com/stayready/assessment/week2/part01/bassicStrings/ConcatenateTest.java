@@ -4,9 +4,11 @@ import com.stayready.assessment.week2.part01.BasicStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ConcatenateTest {
+public class ConcatenateTest 
+{
     @Test
-    public void test1() {
+    public void test1() 
+    {
         test("The", "Quick", "TheQuick");
     }
 
