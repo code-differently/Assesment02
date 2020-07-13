@@ -23,7 +23,7 @@ public class PetTest {
         PetOwner expected = new PetOwner(null, null);
 
         // When
-        p.setOwner(expected);
+        p.setOwner(expected); //Added since the pets owner was not set; otherwise, getOwner would return null
         PetOwner actual = p.getOwner();
 
         // Then
@@ -38,6 +38,7 @@ public class PetTest {
         PetOwner expected = new PetOwner(null, p);
 
         // When
+        p.setOwner(expected); //Added since the pets owner was not set; otherwise, getOwner would return null
         PetOwner actual = p.getOwner();
 
         // Then

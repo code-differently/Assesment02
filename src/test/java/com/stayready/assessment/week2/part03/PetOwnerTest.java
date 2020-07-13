@@ -45,6 +45,7 @@ public class PetOwnerTest {
 
         // When
         po.addPet(newPet);
+       // newPet.setOwner(po);//Added to set the owner of Dog otherwise it will be null.
 
         // Then
         boolean outcome = po.isOwnerOf(newPet);
@@ -72,8 +73,11 @@ public class PetOwnerTest {
         Pet newPet = new Dog();
         Pet anotherPet = new Dog();
         PetOwner po = new PetOwner("", newPet);
+        //PetOwner lo = new PetOwner("L", anotherPet);
 
         // When
+         newPet.setOwner(po);//Added to set the owner of Dog otherwise it will be null.
+        //anotherPet.setOwner(lo);
         boolean outcome = po.isOwnerOf(newPet);
         boolean poOwnsAnotherPet = po.isOwnerOf(anotherPet);
 
