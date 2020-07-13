@@ -1,24 +1,36 @@
 package com.stayready.assessment.week2.part03;
 
+import java.util.*;
+
+
 public class PetOwner {
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
+
+    // data attributes
+    private String name;
+    private Pet[] pets;
+
+
     public PetOwner(String name, Pet... pets) {
+        this.name = name;
+        this.pets = pets;
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+        ArrayList pets = new ArrayList();
+        pets.add(pet);
     }
 
     /**
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
-
     }
 
     /**

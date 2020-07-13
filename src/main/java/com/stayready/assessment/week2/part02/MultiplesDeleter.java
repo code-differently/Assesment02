@@ -1,5 +1,7 @@
 package com.stayready.assessment.week2.part02;
 
+import java.util.Arrays;
+
 public class MultiplesDeleter {
     /**
      * @param ints array of Integer objects
