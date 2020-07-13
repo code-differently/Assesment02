@@ -47,7 +47,7 @@ public class CatTest {
         // Given
         String expectedName = "Cat name";
         Integer expectedAge = Integer.MAX_VALUE;
-        Cat cat = new Cat(expectedAge);
+        Cat cat = new Cat(expectedName,expectedAge);
 
         // When
         String actualName = cat.getName();

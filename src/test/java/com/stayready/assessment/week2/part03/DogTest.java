@@ -47,7 +47,7 @@ public class DogTest {
         // Given
         String expectedName = "Dog name";
         Integer expectedAge = Integer.MAX_VALUE;
-        Dog dog = new Dog(expectedAge);
+        Dog dog = new Dog(expectedName, expectedAge);
 
         // When
         String actualName = dog.getName();
