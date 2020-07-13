@@ -63,11 +63,6 @@
 
 
 
-
-
-
-
-
 <br><br><br><br><br>
 
 ### Part 3; Defining methods
