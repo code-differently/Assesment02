@@ -17,6 +17,7 @@ public class RepeatStringTest {
                 .append(stringToRepeat)
                 .append(stringToRepeat)
                 .toString();
+        System.out.print(expected);
 
         // when
         String actual = StringUtils.repeatString(stringToRepeat, numberOfTimesToRepeat);
