@@ -7,7 +7,8 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        String conca="";
+        return conca+=string1+string2;
     }
 
     /**
@@ -15,7 +16,9 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        StringBuilder sb = new StringBuilder(string1);
+        
+        return sb.reverse().toString();
     }
 
     /**
@@ -24,7 +27,12 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        StringBuilder sb = new StringBuilder(string1);
+        StringBuilder sb2 = new StringBuilder(string2);
+        String concate="";
+        concate= sb.reverse().toString()+ sb2.reverse().toString();
+
+        return concate;
     }
 
     /**
@@ -32,8 +40,31 @@ public class BasicStringUtils {
      * @param charactersToRemove - Characters that should be removed from `string`
      * @return `string` with `charactersToRemove` removed
      */
+    public static String charRemoveAt(String str, int p) {
+        return str.substring(0, p) + str.substring(p + 1);
+    }
     public static String removeCharacters(String string, String charactersToRemove) {
+//        StringBuilder sb= new StringBuilder(string);
+//        String removeChar="";
+//        String beforeRemove="";
+//        String afterRemove="";
+//        Integer toRemove=0;
+//        Integer count =0;
+//        toRemove=sb.indexOf(charactersToRemove);
+//        removeChar= sb.
+////       // while(count<=sb.length()) {
+////         for (int i = 0; i <= sb.length(); i++) {
+////                 toRemove = sb.indexOf(charactersToRemove);
+////                 beforeRemove = sb.substring(0, toRemove);
+////                 afterRemove = sb.substring(toRemove + 1,sb.length()-1);
+////            //count++;
+////        }
+//
+//
+
+        //return afterRemove;
         return null;
+
     }
 
     /**

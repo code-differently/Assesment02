@@ -1,17 +1,27 @@
 package com.stayready.assessment.week2.part03;
 
+import java.util.ArrayList;
+
 public class PetOwner {
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
+     *
      */
+    private String name;
+    private volatile ArrayList<Pet> pets = new ArrayList<>();
     public PetOwner(String name, Pet... pets) {
+        this.name= name;
+
+
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+        //petOwner.addPet(pet);
+
     }
 
     /**
