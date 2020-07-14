@@ -6,7 +6,6 @@ import java.util.Stack;
 public class Palindrome {
     public Integer countPalindromes(String input){
         ArrayList<String> arrList = new ArrayList<String>();
-        Stack<Character> stackOfChars = new Stack<Character>();
         for(int i = 0; i < input.length(); i++) {
             for(int j = i + 1; j <= input.length(); j++) {
                 arrList.add(input.substring(i, j));
@@ -18,32 +17,29 @@ public class Palindrome {
             if(length == 1) {
                 numPalindromes++;
             }
-            else if(length > 1) {
-                if(length % 2 == 0) {
-                    for(int firstHalf = 0; firstHalf < length / 2; firstHalf++) {
-                        stackOfChars.push(word.charAt(firstHalf));
-                    }
-                    for(int secondHalf = length / 2; secondHalf < length; secondHalf++) {
-                        if(word.charAt(secondHalf) == stackOfChars.peek()) {
-                            stackOfChars.pop();
-                        }
-                    }
-                }
-                //skipping the middle letter
-                else if(length % 2 == 1) {
-                    for(int firstHalf = 0; firstHalf < (length / 2); firstHalf++) {
-                        stackOfChars.push(word.charAt(firstHalf));
-                    }
-                    for(int secondHalf = (length / 2) + 1; secondHalf < length; secondHalf++) {
-                        if(word.charAt(secondHalf) == stackOfChars.peek()) {
-                            stackOfChars.pop();
-                        }
-                    }
-                }
-                if(stackOfChars.empty()) {
+            else if(length == 2) {
+                char[] individualLetters = word.toCharArray();
+                if(individualLetters[0] == individualLetters[1]) {
                     numPalindromes++;
                 }
-                stackOfChars.clear();
+            }
+            else if(length > 2) {
+                if(length % 2 == 0) {
+                    String firstHalf = word.substring(0, length / 2);
+                    StringBuilder secondHalf = new StringBuilder();
+                    secondHalf.append(word.substring(length/2)).reverse();
+                    if(firstHalf.equals(secondHalf.toString())) {
+                        numPalindromes++;
+                    }
+                }
+                else if(length % 2 == 1){
+                    String firstHalf = word.substring(0, length / 2);
+                    StringBuilder secondHalf = new StringBuilder();
+                    secondHalf.append(word.substring((length/2) + 1)).reverse();
+                    if(firstHalf.equals(secondHalf.toString())) {
+                        numPalindromes++;
+                    }
+                }
             }
         }
         return numPalindromes;
