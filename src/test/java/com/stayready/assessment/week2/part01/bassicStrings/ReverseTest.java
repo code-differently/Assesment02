@@ -6,8 +6,7 @@ import org.junit.Test;
 
 public class ReverseTest {
     @Test
-    public void test1() {
-        test("The", "ehT");
+    public void test1() { test("The", "ehT");
     }
 
     @Test

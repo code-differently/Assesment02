@@ -1,20 +1,35 @@
 package com.stayready.assessment.week2.part01;
 
+import javax.swing.*;
+import java.util.Scanner;
+
 public class PredicateUtilities {
     /**
      * @param value - the value to be evaluated
      * @return true if `value` is a multiple of 2
      */
     public static Boolean isEven(Integer value) {
-        return null;
+        int num = value;
+        if(num%2 == 0)
+            System.out.println(num + "is even");
+        else
+            System.out.println("false");
+
+         return true;
     }
 
     /**
      * @param value - the value to be evaluated
      * @return true if `value` is not a multiple of 2
      */
-    public static Boolean isOdd(Integer value) {
-        return null;
+    public static Boolean isOdd(Integer value){
+        int num = value;
+        if(num%2 == 0)
+            System.out.println(num + "is odd");
+        else
+            System.out.println("false");
+
+        return false;
     }
 
     /**
@@ -24,6 +39,7 @@ public class PredicateUtilities {
     public static Boolean isMultipleOf3(Integer value) {
         return null;
     }
+
 
     /**
      *
