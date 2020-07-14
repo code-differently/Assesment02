@@ -15,14 +15,17 @@ public class ConcatenateTest {
         test("Brown", "Fox", "BrownFox");
     }
 
+
     @Test
     public void test3() {
         test("Jumps", "Over", "JumpsOver");
     }
 
+
+
     private void test(String string1, String string2, String expectedString) {
         // when
-        String actualString = BasicStringUtils.concatentate(string1, string2);
+        String actualString = BasicStringUtils.concatenate(string1, string2);
 
         // then
         Assert.assertEquals(expectedString, actualString);
