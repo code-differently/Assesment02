@@ -6,8 +6,16 @@ public class StringUtils {
      * @param amountOfPadding - amount of padding to be flushed left
      * @return `stringToBePadded` flushed right by left-padding
      */
-    public static String padLeft(String stringToBePadded, int amountOfPadding) {
-        return null;
+    public static String padLeft(String stringToBePadded, int amountOfPadding) 
+    {
+        StringBuilder padL = new StringBuilder();
+
+        for(int i = 0; i < amountOfPadding; i++)
+        {
+            padL.append(' ');
+        }
+
+        return padL.substring(stringToBePadded, amountOfPadding);
     }
 
     /**
@@ -15,8 +23,16 @@ public class StringUtils {
      * @param amountOfPadding - amount of padding to be flushed right
      * @return `stringToBePadded` flushed right by right-padding
      */
-    public static String padRight(String stringToBePadded, int amountOfPadding) {
-        return null;
+    public static String padRight(String stringToBePadded, int amountOfPadding) 
+    {
+        StringBuilder padR = new StringBuilder();
+
+        for(int i = 0; i < amountOfPadding; i++)
+        {
+            padR.append(' ');
+        }
+
+        return padR.substring(stringToBePadded, amountOfPadding);
     }
 
     /**
@@ -25,15 +41,24 @@ public class StringUtils {
      * @return the string repeated and concatenated `n` times
      */
     public static String repeatString(String stringToBeRepeated, int numberOfTimeToRepeat) {
-        return null;
+        return stringToBeRepeated.repeat(numberOfTimeToRepeat);
+
     }
 
     /**
      * @param string - string to be evaluated
      * @return - true if string only contains alphabetic a-z characters
      */
-    public static Boolean isAlphaString(String string) {
-        return null;
+    public static Boolean isAlphaString(String string) 
+    {
+        if(string.matches(".*[a-z].*"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -41,7 +66,14 @@ public class StringUtils {
      * @return - true if string only contains numeric characters
      */
     public static Boolean isNumericString(String string) {
-        return null;
+        if(string.matches(".*[0-9].*"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -49,6 +81,13 @@ public class StringUtils {
      * @return - true if string only contains special characters
      */
     public static Boolean isSpecialCharacterString(String string) {
-        return null;
+        if(string.matches(".*[^a-z0-9].*"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
